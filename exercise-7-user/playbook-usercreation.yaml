@@ -1,0 +1,10 @@
+-
+  name: Create users on all target servers
+  hosts: all
+  tasks:
+    -
+      name: Create user
+      user:
+          name: deepu
+          uid: 1050
+          group: admin

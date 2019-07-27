@@ -1,0 +1,9 @@
+-
+  name: Variables in playbook usage
+  hosts: target1
+  vars:
+    Country: USA
+  tasks:
+    -
+      name: Print statement
+      command: echo "I went to {{Country}}"

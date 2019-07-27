@@ -1,0 +1,9 @@
+-
+  name: variable definition usage
+  hosts: target1
+  tasks:
+    -
+      name: update /tmp/hosts
+      lineinfile:
+        path: /tmp/hosts
+        line: 'target1 {{target1_ip}}'

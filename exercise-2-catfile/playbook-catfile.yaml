@@ -1,0 +1,8 @@
+# command module is used
+#https://docs.ansible.com/ansible/2.3/command_module.html
+-
+  name: Display the contents of a file
+  hosts: all
+  tasks:
+    - name: Get contents of /etc/hosts
+      command: cat /etc/hosts

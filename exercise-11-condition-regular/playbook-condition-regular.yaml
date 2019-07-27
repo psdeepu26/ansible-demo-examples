@@ -1,0 +1,13 @@
+-
+  name: Condition to check and update by saving the output using register
+  hosts: all
+  tasks:
+    -
+      name: Print details
+      shell: cat /tmp/hosts
+      register: command_output
+    -
+      name: Check and update /tmp/hosts
+      shell: echo "target1 192.168.0.68" >> /tmp/hosts
+      when:
+        command_output.stdout.find("192.168.0.68") == -1

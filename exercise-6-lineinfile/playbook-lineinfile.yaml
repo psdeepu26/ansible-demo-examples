@@ -1,0 +1,9 @@
+-
+  name: Check inline contents in /tmp/hosts
+  hosts: all
+  tasks:
+    -
+      name: Check inline file
+      lineinfile:
+        path: /tmp/hosts
+        line: 'ansiblecontroller 192.168.0.48'

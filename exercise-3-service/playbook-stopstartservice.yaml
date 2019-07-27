@@ -1,0 +1,16 @@
+# service module is used
+#https://docs.ansible.com/ansible/latest/modules/service_module.html
+-
+  name: Stop and Start a Service
+  hosts: all
+  tasks:
+    -
+      name: Stop Web Service
+      service:
+        name: httpd
+        state: stopped
+    -
+      name: Start Web Service
+      service:
+        name: httpd
+        state: started

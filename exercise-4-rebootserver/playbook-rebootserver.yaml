@@ -1,0 +1,9 @@
+# reboot module is used
+#https://docs.ansible.com/ansible/latest/modules/reboot_module.html
+-
+  name: Reboot servers
+  hosts: target2
+  tasks:
+    -
+      name: Rebooting target2
+      reboot:

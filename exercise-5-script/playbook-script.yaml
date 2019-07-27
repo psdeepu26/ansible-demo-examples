@@ -1,0 +1,7 @@
+-
+  name: Execute script to target servers
+  hosts: target1
+  tasks:
+    -
+      name: Execute script
+      script: /tmp/temp_script.sh

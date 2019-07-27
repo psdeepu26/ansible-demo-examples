@@ -1,0 +1,10 @@
+-
+  name: Condition to check the file /tmp/hosts
+  hosts: all
+  tasks:
+    -
+      name: Check /tmp/hosts
+      shell:
+        echo 'cat /tmp/hosts'
+      when:
+        ansible_host == '192.168.0.68'
